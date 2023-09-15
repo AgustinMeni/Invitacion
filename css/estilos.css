@@ -27,6 +27,16 @@ body {
     line-height: 1.5;
 }
 
+/* Estilos para el GIF de la torta */
+.cake-gif {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cake-gif img {
+    max-width: 100%; /* Asegura que el GIF se ajuste al ancho de la sección */
+}
+
 /* Estilos para la sección "ubicacion" */
 .ubicacion {
     text-align: center;
