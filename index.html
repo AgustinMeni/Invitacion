@@ -6,30 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación a cumpleaños</title>
     <link rel="stylesheet" href="./css/estilos.css">
+
 </head>
 
 <body>
     <section class="inicio">
         <h1>¡Feliz cumpleaños para Mi!</h1>
-        <p> Estoy cumliendo un año mas y quiero invitarte celebrarlo. Vamos a comer rico y abundante, asi que veni
-            preparado.Vamos a pasar un rato en familia y amigos. Por favor, confirma
-            tu asistencia a continuación para poder medir comida y bebida</p>
-    
+        <p> Estoy cumpliendo un año más y quiero invitarte a celebrarlo. Vamos a comer rico y abundante, así que ven
+            preparado. Vamos a pasar un rato en familia y amigos. Por favor, confirma tu asistencia a continuación para
+            poder medir comida y bebida.</p>
+            <div class="ubicacion">
+                <h2>Podes acercarte a partir de las <span class="hora">21hs</span></h2>
+                <p>La direccion es:  <a href="https://maps.app.goo.gl/gVHzBneC7yv6E9RR8" target="_blank">Ver ubicación en Google Maps</a></p>
+            </div>
+
         <div class="wp">
-            <form action="https://wa.me/541153847716" method="get" target="_blank">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <br>
-            <label for="asistencia">¿Asistirás?</label>
-            <select id="asistencia" name="asistencia" required>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
-            </select>
-            <br>
-            <input type="submit" value="Confirmar asistencia">
-        </form>
-    </div>
+            <form id="miFormulario" action="https://wa.me/541153847716" method="get" target="_blank">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+                <label for="asistencia">¿Asistirás?</label>
+                <select id="asistencia" name="asistencia" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <input type="submit" value="Confirmar asistencia">
+            </form>
+        </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const formulario = document.getElementById("miFormulario");
+
+            formulario.addEventListener("submit", function (event) {
+                event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+                const nombre = document.getElementById("nombre").value;
+                const asistencia = document.getElementById("asistencia").value;
+
+                let mensaje = "";
+
+                if (asistencia === "si") {
+                    mensaje = `¡Hola ${nombre}! Gracias por confirmar tu asistencia. ¡Nos vemos ese dia!`;
+                } else {
+                    mensaje = `Hola ${nombre}, gracias por tu respuesta. Lamento que no puedas asistir, ¡espero verte en otra ocasión!`;
+                }
+
+                const linkWhatsApp = formulario.getAttribute("action") + `?text=${encodeURIComponent(mensaje)}`;
+
+                // Redirige a WhatsApp con el mensaje personalizado
+                window.location.href = linkWhatsApp;
+            });
+        });
+    </script>
 </body>
 
 </html>
