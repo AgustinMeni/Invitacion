@@ -11,6 +11,10 @@ body {
 .inicio {
     text-align: center;
     padding: 20px;
+    background-image: url(../imagenes/pastel.gif);
+    background-size: 100%;
+    background-position: right center;
+    color: white;
 }
 
 .inicio h1 {
