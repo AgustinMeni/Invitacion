@@ -1,49 +1,63 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Work Sans';
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-.inicio{
-    background-color: #1e2326;
+    background-color:#1e2326;
     color: #fff;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: auto;
 }
-.inicio h1{
-    font-size: 48px;
+
+/* Estilos para la sección "inicio" */
+.inicio {
     text-align: center;
-    padding: 20px 0;
-    text-decoration: underline;
+    padding: 20px;
 }
-.inicio p{
-    padding: 60px;
-    margin: 30px;
-    font-size: 30px;
-    text-align: center;
+
+.inicio h1 {
+    font-size: 28px;
 }
-.inicio .wp{
-    font-size: 20px;
-    padding: 60px;
-    text-align: center;
+
+.inicio p {
+    font-size: 16px;
+    line-height: 1.5;
 }
-.inicio .ubicacion{
-    font-size: 15px;
+
+/* Estilos para la sección "ubicacion" */
+.ubicacion {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+}
+
+.ubicacion h2 {
+    font-size: 24px;
+}
+
+/* Estilos para el enlace de la ubicación */
+.ubicacion a {
+    font-size: 18px;
+    color: #0077cc;
     text-decoration: none;
 }
-.ubicacion a {
-    color: #0077cc;
-    text-decoration: underline;
-}
+
 .ubicacion a:hover {
-    color: #fff;
+    color: #ff5500;
 }
-.hora {
-    font-size: 30px;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: underline;
+
+/* Media Query para dispositivos móviles (pantallas de hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .inicio h1 {
+        font-size: 24px;
+    }
+
+    .inicio p {
+        font-size: 14px;
+    }
+
+    .ubicacion h2 {
+        font-size: 20px;
+    }
+
+    .ubicacion a {
+        font-size: 16px;
+    }
 }
