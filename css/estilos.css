@@ -12,8 +12,9 @@ body {
     text-align: center;
     padding: 20px;
     background-image: url(../imagenes/pastel.gif);
-    background-size: 100%;
-    background-position: right center;
+    background-size: 110%;
+    background-position: right 10% center;
+    background-repeat: no-repeat;
     color: white;
 }
 
