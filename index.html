@@ -49,9 +49,9 @@
                 let mensaje = "";
 
                 if (asistencia === "si") {
-                    mensaje = `¡Hola ${nombre}! Gracias por confirmar tu asistencia. ¡Nos vemos ese dia!`;
+                    mensaje = `¡${nombre}! Confirmo su asistencia.`;
                 } else {
-                    mensaje = `Hola ${nombre}, gracias por tu respuesta. Lamento que no puedas asistir, ¡espero verte en otra ocasión!`;
+                    mensaje = `${nombre}, No confirmo su asistencia.`;
                 }
 
                 const linkWhatsApp = formulario.getAttribute("action") + `?text=${encodeURIComponent(mensaje)}`;
